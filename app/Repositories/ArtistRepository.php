@@ -11,4 +11,14 @@ class ArtistRepository extends Repository {
     {
         return 'App\Artist';
     }
+
+    /**
+     * Get the vocal gender options
+     *
+     * @return mixed
+     */
+    public function getGenders()
+    {
+        return $this->model->vocalgender_list;
+    }
 }

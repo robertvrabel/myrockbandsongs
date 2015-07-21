@@ -4,9 +4,6 @@ use App\Repositories\ArtistRepository;
 use Illuminate\Container\Container;
 use Illuminate\Database\Seeder;
 
-// composer require laracasts/testdummy
-use Laracasts\TestDummy\Factory as TestDummy;
-
 class ArtistTableSeeder extends Seeder {
 
     public function run()
@@ -16,11 +13,19 @@ class ArtistTableSeeder extends Seeder {
         // Initialize ArtistRepository
         $artists = new ArtistRepository(new Container);
 
-        $artists->create([
-            'artist' => 'The First Artist',
-            'artist_orderby' => 'First Artist, The',
-            'vocal_gender' => 1
-        ]);
-    }
+        // Create a new faker object
+        $faker = Faker\Factory::create();
 
+        // How many times we want to run it
+        $run = 25;
+
+        // Fake it!
+        for($i=0; $i < $run; $i++) {
+            $artists->create([
+                'artist' => $faker->name,
+                'artist_orderby' => $faker->name,
+                'vocalgender' => array_rand($artists->getGenders())
+            ]);
+        }
+    }
 }
