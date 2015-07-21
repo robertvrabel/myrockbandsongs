@@ -19,6 +19,9 @@ class DatabaseSeeder extends Seeder
         $this->call('UserTableSeeder');
         $this->call('ArtistTableSeeder');
         $this->call('AlbumTableSeeder');
+        $this->call('GenreTableSeeder');
+        $this->call('PackTableSeeder');
+        $this->call('TypeTableSeeder');
         $this->call('DonationTableSeeder');
 
         Model::reguard();
