@@ -15,7 +15,7 @@ class Album extends Model {
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function mentions()
+    public function artist()
     {
         return $this->belongsTo('App\Artist');
     }
