@@ -12,7 +12,7 @@ class AlbumTableSeeder extends Seeder
     {
         DB::table('albums')->truncate();
 
-        // Initialize ArtistRepository
+        // Initialize Repository
         $albums = new AlbumRepository(new Container);
 
         // Create a new faker object
@@ -36,5 +36,5 @@ class AlbumTableSeeder extends Seeder
             }
         }
     }
-    
+
 }

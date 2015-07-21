@@ -10,7 +10,7 @@ class ArtistTableSeeder extends Seeder {
     {
         DB::table('artists')->truncate();
 
-        // Initialize ArtistRepository
+        // Initialize Repository
         $artists = new ArtistRepository(new Container);
 
         // Create a new faker object
