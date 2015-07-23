@@ -38,6 +38,6 @@ class CreateBookletsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('prints');
+        Schema::drop('booklets');
     }
 }
