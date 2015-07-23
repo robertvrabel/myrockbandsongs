@@ -58,18 +58,24 @@ class BookletTableSeeder extends Seeder
                 // Create a string
                 $create_instruments = implode(',', $create_instruments);
 
+                // Get the orders
+                $orders = $booklets->getOrder();
+
+                // Get the types
+                $types = $booklets->getTypes();
+
                 $booklets->create([
                     'save' => rand(0, 1),
                     'group_by' => rand(0, 1),
                     'first_page' => rand(0, 1),
                     'newest_songs_count' => rand(0, 100),
-                    'order' => array_rand($booklets->getOrder()),
-                    'order2' => array_rand($booklets->getOrder()),
-                    'order3' => array_rand($booklets->getOrder()),
+                    'order' => $orders[array_rand($orders)],
+                    'order2' => $orders[array_rand($orders)],
+                    'order3' => $orders[array_rand($orders)],
                     'font_size' => rand(50, 100),
                     'columns' => $create_columns,
                     'instruments' => $create_instruments,
-                    'types' => array_rand($booklets->getTypes()),
+                    'types' => $types[array_rand($types)],
                     'booklet' => $faker->sentence($nbWords = 4)
                 ]);
             }

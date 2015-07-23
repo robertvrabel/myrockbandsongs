@@ -13,6 +13,9 @@ class ArtistTableSeeder extends Seeder {
         // Initialize Repository
         $artists = new ArtistRepository(new Container);
 
+        // Get the genders
+        $genders = $artists->getGenders();
+
         // Create a new faker object
         $faker = Faker\Factory::create();
 
@@ -24,7 +27,7 @@ class ArtistTableSeeder extends Seeder {
             $artists->create([
                 'artist' => $faker->name,
                 'artist_orderby' => $faker->name,
-                'vocalgender' => array_rand($artists->getGenders())
+                'vocalgender' => $genders[array_rand($genders)]
             ]);
         }
     }
