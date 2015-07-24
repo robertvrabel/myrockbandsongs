@@ -22,26 +22,25 @@ class CreateSongsTable extends Migration
             $table->integer('user_id')->unsigned()->index(); // replaces submitted_id
             $table->date('added');
             $table->timestamps();
-            $table->integer('difficulty')->unsigned(); // replaces difficulty_id
             $table->tinyInteger('rating');
             $table->string('gender'); // use to be 1 or 0
-            $table->tinyInteger('guitar');
-            $table->tinyInteger('vocals');
-            $table->tinyInteger('drums');
-            $table->tinyInteger('bass');
-            $table->tinyInteger('keyboard');
-            $table->tinyInteger('pro_guitar');
-            $table->tinyInteger('pro_vocals');
-            $table->tinyInteger('pro_drums');
-            $table->tinyInteger('pro_bass');
-            $table->tinyInteger('pro_keyboard');
-            $table->tinyInteger('album_track');
-            $table->tinyInteger('vocal_tracks');
+            $table->string('difficulty', 1); // replaces difficulty_id
+            $table->string('guitar', 1);
+            $table->string('vocals', 1);
+            $table->string('drums', 1);
+            $table->string('bass', 1);
+            $table->string('keyboard', 1);
+            $table->string('pro_guitar', 1);
+            $table->string('pro_vocals', 1);
+            $table->string('pro_drums', 1);
+            $table->string('pro_bass', 1);
+            $table->string('pro_keyboard', 1);
+            $table->string('album_track', 1);
+            $table->string('vocal_tracks', 1);
             $table->smallInteger('year');
             $table->string('length');
             $table->string('cost');
             $table->string('system');
-            $table->string('pro_mode');
             $table->string('song');
         });
     }

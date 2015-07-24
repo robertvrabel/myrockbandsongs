@@ -35,4 +35,47 @@ class Song extends Model {
         'pro_mode',
         'song'
     ];
+
+    /** @var array  */
+    public $difficulties = [
+        '' => 'N/A',
+        '0' => '0',
+        '1' => '1',
+        '2' => '2',
+        '3' => '3',
+        '4' => '4',
+        '5' => '5',
+        '6' => '6'
+    ];
+
+    /** @var array */
+    public $ratings = [
+        '0' => 'N/A',
+        '1' => 'Supervision Recommended',
+        '2' => 'Family Friendly'
+    ];
+
+    /** @var array */
+    public $genders = [
+        'Male' => 'Male',
+        'Female' => 'Female',
+        'Male & Female' => 'Male & Female'
+    ];
+
+    /** @var array */
+    public $costs = [
+        '' => 'N/A',
+        '0.99' => '0.99 (80 MP)',
+        '1.99' => '1.99 (160 MP)',
+        '2.99' => '2.99 (240 MP)',
+        '0.00' => 'Free'
+    ];
+
+    /** @var array */
+    public $systems = [
+        '' => 'N/A',
+        'ALL' => 'ALL',
+        'XBOX360' => 'XBOX360',
+        'PS3-XBOX360' => 'PS3 & XBOX360'
+    ];
 }
