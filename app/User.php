@@ -42,4 +42,14 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
     {
         return $this->belongsToMany('App\Song')->withTimestamps();
     }
+
+    /**
+     * Get the wishlist associated to this user
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function wishlist()
+    {
+        return $this->belongsToMany('App\Song', 'wishlist')->withTimestamps();
+    }
 }

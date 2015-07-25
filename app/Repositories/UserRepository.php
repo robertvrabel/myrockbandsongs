@@ -15,10 +15,20 @@ class UserRepository extends Repository {
     /**
      * Sync the songs to the user
      *
-     * @param array $topics
+     * @param array $songs
      */
     public function syncSongs(array $songs)
     {
         $this->model->songs()->sync($songs);
+    }
+
+    /**
+     * Sync the wishlist to the user
+     *
+     * @param array $songs
+     */
+    public function syncWishlist(array $songs)
+    {
+        $this->model->wishlist()->sync($songs);
     }
 }

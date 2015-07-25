@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateSongUser extends Migration
+class CreateWishlistTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,10 +12,9 @@ class CreateSongUser extends Migration
      */
     public function up()
     {
-        Schema::create('song_user', function (Blueprint $table) {
+        Schema::create('wishlist', function (Blueprint $table) {
             $table->integer('song_id')->unsigned()->index();
             $table->integer('user_id')->unsigned()->index();
-            $table->tinyInteger('pro_mode');
             $table->timestamps();
         });
     }
@@ -27,6 +26,6 @@ class CreateSongUser extends Migration
      */
     public function down()
     {
-        Schema::drop('song_user');
+        Schema::drop('wishlist');
     }
 }
