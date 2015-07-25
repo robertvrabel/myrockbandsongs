@@ -11,4 +11,14 @@ class UserRepository extends Repository {
     {
         return 'App\User';
     }
+
+    /**
+     * Sync the songs to the user
+     *
+     * @param array $topics
+     */
+    public function syncSongs(array $songs)
+    {
+        $this->model->songs()->sync($songs);
+    }
 }

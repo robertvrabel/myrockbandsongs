@@ -78,4 +78,5 @@ class Song extends Model {
         'XBOX360' => 'XBOX360',
         'PS3-XBOX360' => 'PS3 & XBOX360'
     ];
+
 }
