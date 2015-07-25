@@ -29,7 +29,7 @@ class RatingTableSeeder extends Seeder
 
         // Get the types
         $types = $rating->getTypesList();
-        
+
         // Create a new faker object
         $faker = Faker\Factory::create();
 

@@ -27,6 +27,7 @@ class DatabaseSeeder extends Seeder
         $this->call('SongTableSeeder');
         $this->call('SongUserTableSeeder');
         $this->call('RatingTableSeeder');
+        $this->call('CommentTableSeeder');
 
         Model::reguard();
     }
