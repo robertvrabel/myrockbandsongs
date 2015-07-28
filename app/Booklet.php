@@ -129,4 +129,22 @@ class Booklet extends Model
         'pro_keyboard' => 'Pro Keyboard'
     ];
 
+    /** @var array */
+    public $regular_instrument_list = [
+        'guitar' => 'Guitar',
+        'bass' => 'Bass',
+        'drums' => 'Drums',
+        'vocals' => 'Vocals',
+        'keyboard' => 'Keyboard'
+    ];
+
+    /** @var array */
+    public $systems_list = [
+        'PS2' => 'Playstation 2',
+        'PS3' => 'Playstation 3',
+        'PS4' => 'Playstation 4',
+        'XBOX360' => 'XBOX360',
+        'WII' => 'Nintendo Wii'
+    ];
+
 }

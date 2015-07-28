@@ -31,4 +31,14 @@ class UserRepository extends Repository {
     {
         $this->model->wishlist()->sync($songs);
     }
+
+    /**
+     * Get the timezones
+     *
+     * @return mixed
+     */
+    public function getTimezones()
+    {
+        return $this->model->timezone_list;
+    }
 }

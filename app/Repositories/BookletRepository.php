@@ -40,8 +40,24 @@ class BookletRepository extends Repository
     /**
      * @return mixed
      */
+    public function getRegularInstruments()
+    {
+        return $this->model->regular_instrument_list;
+    }
+
+    /**
+     * @return mixed
+     */
     public function getColumns()
     {
         return $this->model->columns_list;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getSystems()
+    {
+        return $this->model->systems_list;
     }
 }
