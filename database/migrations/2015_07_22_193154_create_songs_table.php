@@ -15,11 +15,17 @@ class CreateSongsTable extends Migration
         Schema::create('songs', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('artist_id')->unsigned();
+            $table->foreign('artist_id')->references('id')->on('artists')->onDelete('cascade');
             $table->integer('album_id')->unsigned();
+            $table->foreign('album_id')->references('id')->on('albums')->onDelete('cascade');
             $table->integer('genre_id')->unsigned();
+            $table->foreign('genre_id')->references('id')->on('genres')->onDelete('cascade');
             $table->integer('pack_id')->unsigned();
+            $table->foreign('pack_id')->references('id')->on('packs')->onDelete('cascade');
             $table->integer('type_id')->unsigned();
-            $table->integer('user_id')->unsigned()->index(); // replaces submitted_id
+            $table->foreign('type_id')->references('id')->on('types')->onDelete('cascade');
+            $table->integer('user_id')->unsigned()->index();
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->date('added');
             $table->timestamps();
             $table->tinyInteger('rating');

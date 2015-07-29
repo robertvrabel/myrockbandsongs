@@ -14,7 +14,8 @@ class DatabaseSeeder extends Seeder
     {
         Model::unguard();
 
-        // $this->call(UserTableSeeder::class);
+        //disable foreign key check
+        DB::statement('SET FOREIGN_KEY_CHECKS=0;');
 
         $this->call('UserTableSeeder');
         $this->call('ArtistTableSeeder');
@@ -29,6 +30,9 @@ class DatabaseSeeder extends Seeder
         $this->call('WishlistTableSeeder');
         $this->call('RatingTableSeeder');
         $this->call('CommentTableSeeder');
+
+        // re-enable Foreign Key Checks
+        DB::statement('SET FOREIGN_KEY_CHECKS=1;');
 
         Model::reguard();
     }

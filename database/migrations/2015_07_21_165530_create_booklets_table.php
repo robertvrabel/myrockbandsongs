@@ -15,6 +15,7 @@ class CreateBookletsTable extends Migration
         Schema::create('booklets', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id')->unsigned()->index();
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->tinyInteger('save');
             $table->tinyInteger('group_by');
             $table->tinyInteger('first_page');
