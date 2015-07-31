@@ -16,9 +16,9 @@ class BookletRepository extends Repository
     /**
      * @return mixed
      */
-    public function getOrder()
+    public function getOrderby()
     {
-        return $this->model->order_list;
+        return $this->model->orderby;
     }
 
     /**
@@ -26,7 +26,7 @@ class BookletRepository extends Repository
      */
     public function getTypes()
     {
-        return $this->model->types_list;
+        return $this->model->types;
     }
 
     /**
@@ -34,7 +34,7 @@ class BookletRepository extends Repository
      */
     public function getInstruments()
     {
-        return $this->model->instruments_list;
+        return $this->model->instruments;
     }
 
     /**
@@ -42,7 +42,7 @@ class BookletRepository extends Repository
      */
     public function getRegularInstruments()
     {
-        return $this->model->regular_instrument_list;
+        return $this->model->regular_instruments;
     }
 
     /**
@@ -50,7 +50,7 @@ class BookletRepository extends Repository
      */
     public function getColumns()
     {
-        return $this->model->columns_list;
+        return $this->model->columns;
     }
 
     /**
@@ -58,6 +58,6 @@ class BookletRepository extends Repository
      */
     public function getSystems()
     {
-        return $this->model->systems_list;
+        return $this->model->systems;
     }
 }

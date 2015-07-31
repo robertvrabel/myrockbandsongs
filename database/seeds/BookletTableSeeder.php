@@ -59,7 +59,7 @@ class BookletTableSeeder extends Seeder
                 $create_instruments = implode(',', $create_instruments);
 
                 // Get the orders
-                $orders = $booklets->getOrder();
+                $orders = $booklets->getOrderby();
 
                 // Get the types
                 $types = $booklets->getTypes();

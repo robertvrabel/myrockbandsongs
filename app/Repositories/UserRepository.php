@@ -39,6 +39,6 @@ class UserRepository extends Repository {
      */
     public function getTimezones()
     {
-        return $this->model->timezone_list;
+        return $this->model->timezones;
     }
 }

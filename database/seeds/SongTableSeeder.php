@@ -44,19 +44,19 @@ class SongTableSeeder extends Seeder {
         $users = $users->all()->toArray();
 
         // Get the difficulties
-        $difficulties = $songs->getDifficultiesList();
+        $difficulties = $songs->getDifficulties();
 
         // Get the ratings
-        $ratings = $songs->getRatingsList();
+        $ratings = $songs->getRatings();
 
         // Get the genders
-        $genders = $songs->getGendersList();
+        $genders = $songs->getGenders();
 
         // Get the costs
-        $costs = $songs->getCostsList();
+        $costs = $songs->getCosts();
 
         // Get the systems
-        $systems = $songs->getSystemsList();
+        $systems = $songs->getSystems();
 
         // Create a new faker object
         $faker = Faker\Factory::create();

@@ -13,7 +13,7 @@ class Rating extends Model {
     ];
 
     /** @var array */
-    public $type_list = [
+    protected $types = [
         '0' => 'Overall',
         '1' => 'Guitar',
         '2' => 'Drums',
@@ -23,11 +23,27 @@ class Rating extends Model {
     ];
 
     /** @var array */
-    public $rating_list = [
+    protected $ratings = [
         '1' => '1',
         '2' => '2',
         '3' => '3',
         '4' => '4',
         '5' => '5'
     ];
+
+    /**
+     * @return array
+     */
+    public function getTypesAttribute()
+    {
+        return $this->types;
+    }
+
+    /**
+     * @return array
+     */
+    public function getRatingsAttribute()
+    {
+        return $this->ratings;
+    }
 }

@@ -12,27 +12,27 @@ class SongRepository extends Repository {
         return 'App\Song';
     }
 
-    public function getDifficultiesList()
+    public function getDifficulties()
     {
         return $this->model->difficulties;
     }
 
-    public function getRatingsList()
+    public function getRatings()
     {
         return $this->model->ratings;
     }
 
-    public function getGendersList()
+    public function getGenders()
     {
         return $this->model->genders;
     }
 
-    public function getCostsList()
+    public function getCosts()
     {
         return $this->model->costs;
     }
 
-    public function getSystemsList()
+    public function getSystems()
     {
         return $this->model->systems;
     }

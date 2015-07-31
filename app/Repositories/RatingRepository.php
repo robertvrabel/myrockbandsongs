@@ -1,6 +1,7 @@
 <?php namespace App\Repositories;
 
-class RatingRepository extends Repository {
+class RatingRepository extends Repository
+{
 
     /**
      * The Model
@@ -13,22 +14,18 @@ class RatingRepository extends Repository {
     }
 
     /**
-     * Get the types list
-     *
      * @return mixed
      */
-    public function getTypesList()
+    public function getTypes()
     {
-        return $this->model->type_list;
+        return $this->model->types;
     }
 
     /**
-     * Get the ratings list
-     *
      * @return mixed
      */
-    public function getRatingsList()
+    public function getRatings()
     {
-        return $this->model->rating_list;
+        return $this->model->ratings;
     }
 }

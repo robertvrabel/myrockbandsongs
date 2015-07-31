@@ -2,7 +2,8 @@
 
 use Illuminate\Database\Eloquent\Model;
 
-class Artist extends Model {
+class Artist extends Model
+{
 
     /** @var array */
     protected $fillable = [
@@ -11,10 +12,18 @@ class Artist extends Model {
         'artist_orderby'
     ];
 
-    public $gender_list = [
+    protected $genders = [
         'Male' => 'Male',
-        'Female' => 'Male'
+        'Female' => 'Female'
     ];
+
+    /**
+     * @return array
+     */
+    public function getGendersAttribute()
+    {
+        return $this->genders;
+    }
 
     /**
      * Get the albums associated to this artist
@@ -24,15 +33,5 @@ class Artist extends Model {
     public function albums()
     {
         return $this->belongsToMany('App\Album')->withTimestamps();
-    }
-
-        /**
-         * Get a list of tiers
-         *
-         * @return array
-         */
-    public function getVocalGenderListAttribute()
-    {
-        return $this->gender_list;
     }
 }

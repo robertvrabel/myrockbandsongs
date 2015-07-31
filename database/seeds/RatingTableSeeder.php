@@ -25,10 +25,10 @@ class RatingTableSeeder extends Seeder
         $songs = $song->all()->toArray();
 
         // Get the ratings
-        $ratings = $rating->getRatingsList();
+        $ratings = $rating->getRatings();
 
         // Get the types
-        $types = $rating->getTypesList();
+        $types = $rating->getTypes();
 
         // Create a new faker object
         $faker = Faker\Factory::create();

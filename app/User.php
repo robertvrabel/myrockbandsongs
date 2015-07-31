@@ -38,7 +38,7 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
      *
      * @var array
      */
-    public $timezone_list = [
+    protected $timezones = [
         '' => '',
         '-12' => '(GMT -12:00) Eniwetok, Kwajalein',
         '-11' => '(GMT -11:00) Midway Island, Samoa',
@@ -71,6 +71,14 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
         '11' => '(GMT +11:00) Magadan, Solomon Islands, New Caledonia',
         '12' => '(GMT +12:00) Auckland, Wellington, Fiji, Kamchatka'
     ];
+
+    /**
+     * @return array
+     */
+    public function getTimezonesAttribute()
+    {
+        return $this->timezones;
+    }
 
     /**
      * Get the songs associated to this user

@@ -22,7 +22,7 @@ class Booklet extends Model
     ];
 
     /** @var array */
-    public $order_list = [
+    protected $orderby = [
         'song' => 'Song',
         'artist' => 'Artist',
         'gender' => 'Vocal Gender',
@@ -51,7 +51,7 @@ class Booklet extends Model
     ];
 
     /** @var array */
-    public $types_list = [
+    protected $types = [
         'all' => 'All Owned Songs',
         'rb1' => 'Rock Band 1',
         'rb2' => 'Rock Band 2',
@@ -66,7 +66,7 @@ class Booklet extends Model
     ];
 
     /** @var array */
-    public $columns_list = [
+    protected $columns = [
         'song' => 'Song',
         'artist' => 'Artist',
         'Vocal Gender' => 'Vocal Gender',
@@ -96,7 +96,7 @@ class Booklet extends Model
     ];
 
     /** @var array */
-    public $font_list = [
+    protected $fonts = [
         '200' => '200%',
         '190' => '190%',
         '180' => '180%',
@@ -116,7 +116,7 @@ class Booklet extends Model
     ];
 
     /** @var array */
-    public $instruments_list = [
+    protected $instruments = [
         'guitar' => 'Guitar',
         'bass' => 'Bass',
         'drums' => 'Drums',
@@ -130,7 +130,7 @@ class Booklet extends Model
     ];
 
     /** @var array */
-    public $regular_instrument_list = [
+    protected $regular_instruments = [
         'guitar' => 'Guitar',
         'bass' => 'Bass',
         'drums' => 'Drums',
@@ -139,7 +139,7 @@ class Booklet extends Model
     ];
 
     /** @var array */
-    public $systems_list = [
+    protected $systems = [
         'PS2' => 'Playstation 2',
         'PS3' => 'Playstation 3',
         'PS4' => 'Playstation 4',
@@ -147,4 +147,59 @@ class Booklet extends Model
         'WII' => 'Nintendo Wii'
     ];
 
+    /**
+     * @return array
+     */
+    public function getOrderbyAttribute()
+    {
+        return $this->orderby;
+    }
+
+    /**
+     * @return array
+     */
+    public function getTypesAttribute()
+    {
+        return $this->types;
+    }
+
+    /**
+     * @return array
+     */
+    public function getColumnsAttribute()
+    {
+        return $this->columns;
+    }
+
+    /**
+     * @return array
+     */
+    public function getFontsAttribute()
+    {
+        return $this->fonts;
+    }
+
+    /**
+     * @return array
+     */
+    public function getInstrumentsAttribute()
+    {
+        return $this->instruments;
+    }
+
+    /**
+     * @return array
+     */
+    public function getRegularInstrumentsAttribute()
+    {
+        return $this->regular_instruments;
+    }
+
+    /**
+     * @return array
+     */
+    public function getSystemsAttribute()
+    {
+        return $this->systems;
+    }
 }

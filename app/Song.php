@@ -37,7 +37,7 @@ class Song extends Model {
     ];
 
     /** @var array  */
-    public $difficulties = [
+    protected $difficulties = [
         '' => 'N/A',
         '0' => '0',
         '1' => '1',
@@ -49,21 +49,21 @@ class Song extends Model {
     ];
 
     /** @var array */
-    public $ratings = [
+    protected $ratings = [
         '0' => 'N/A',
         '1' => 'Supervision Recommended',
         '2' => 'Family Friendly'
     ];
 
     /** @var array */
-    public $genders = [
+    protected $genders = [
         'Male' => 'Male',
         'Female' => 'Female',
         'Male & Female' => 'Male & Female'
     ];
 
     /** @var array */
-    public $costs = [
+    protected $costs = [
         '' => 'N/A',
         '0.99' => '0.99 (80 MP)',
         '1.99' => '1.99 (160 MP)',
@@ -72,11 +72,50 @@ class Song extends Model {
     ];
 
     /** @var array */
-    public $systems = [
+    protected $systems = [
         '' => 'N/A',
         'ALL' => 'ALL',
         'XBOX360' => 'XBOX360',
         'PS3-XBOX360' => 'PS3 & XBOX360'
     ];
 
+    /**
+     * @return array
+     */
+    public function getDifficultiesAttribute()
+    {
+        return $this->difficulties;
+    }
+
+    /**
+     * @return array
+     */
+    public function getRatingsAttribute()
+    {
+        return $this->ratings;
+    }
+
+    /**
+     * @return array
+     */
+    public function getGendersAttribute()
+    {
+        return $this->genders;
+    }
+
+    /**
+     * @return array
+     */
+    public function getCostsAttribute()
+    {
+        return $this->costs;
+    }
+
+    /**
+     * @return array
+     */
+    public function getSystemsAttribute()
+    {
+        return $this->systems;
+    }
 }

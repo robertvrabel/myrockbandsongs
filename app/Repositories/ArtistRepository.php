@@ -19,6 +19,6 @@ class ArtistRepository extends Repository {
      */
     public function getGenders()
     {
-        return $this->model->vocalgender_list;
+        return $this->model->genders;
     }
 }
