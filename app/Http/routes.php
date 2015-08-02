@@ -16,6 +16,9 @@ Route::get('/', function () {
     return view('pages/index');
 });
 
+// User Settings
+Route::get('user/settings', 'Auth\SettingsController@index');
+
 // Authentication
 Route::get('auth/login', 'Auth\AuthController@getLogin');
 Route::post('auth/login', 'Auth\AuthController@postLogin');
