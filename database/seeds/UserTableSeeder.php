@@ -36,7 +36,7 @@ class UserTableSeeder extends Seeder
 
             // Force an Admin account
             $is_admin = ($i == 0) ? 1 : 0;
-            $user_name = ($i == 0) ? 'Admin' : $faker->userName;
+            $user_name = ($i == 0) ? 'Admin' : str_replace('.', '', $faker->userName);
             $email = ($i == 0) ? 'admin@myrockbandsongs.com' : $faker->email;
             $first_name = ($i == 0) ? 'Admin' : $faker->firstName;
             $last_name = ($i == 0) ? 'Account' : $faker->lastName;
