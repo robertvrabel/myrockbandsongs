@@ -4,7 +4,6 @@ use App\Http\Controllers\Controller;
 use App\Repositories\BookletRepository;
 use App\Repositories\UserRepository;
 use App\Http\Requests\UserRequest;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Validator;
 
