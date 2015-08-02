@@ -33,6 +33,6 @@ Route::controllers([
     'password' => 'Auth\PasswordController',
 ]);
 
-Route::group(['prefix' => 'admin'], function () {
+Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function () {
     Route::get('users', ['uses' => 'Admin\UserController@index', 'as' => 'admin.users.index']);
 });
