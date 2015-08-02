@@ -41,4 +41,14 @@ class UserRepository extends Repository {
     {
         return $this->model->timezones;
     }
+
+    /**
+     * If they are an admin or not
+     *
+     * @return bool
+     */
+    public function isAdmin()
+    {
+        return $this->model->is_admin == 1 ? true : false;
+    }
 }
