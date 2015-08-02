@@ -26,7 +26,6 @@ class UserRequest extends Request {
             'last_name' => 'required|max:255',
             'email' => 'required|email|max:255|unique:users,email,' . Auth::user()->id,
             'user_name' => 'required|user_name|min:3|max:50|unique:users,user_name,' . Auth::user()->id,
-            'password' => 'required|confirmed|min:6',
         ];
     }
 

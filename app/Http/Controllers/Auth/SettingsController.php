@@ -49,10 +49,10 @@ class SettingsController extends Controller {
         return view('auth.settings', compact('user', 'timezones', 'systems', 'instruments'));
     }
 
+
     /**
-     * Update user settings
-     * @param $id
-     * @param Request $request
+     * @param UserRequest $request
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
      */
     public function update(UserRequest $request)
     {
