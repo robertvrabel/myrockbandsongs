@@ -22,6 +22,11 @@
 @import "../../../bower_components/foundation/scss/foundation/components/offcanvas";
 @import "../../../bower_components/foundation/scss/foundation/components/dropdown";
 @import "../../../bower_components/foundation/scss/foundation/components/alert-boxes";
+@import "../../../bower_components/foundation/scss/foundation/components/tables";
+@import "../../../bower_components/foundation/scss/foundation/components/pagination";
 
 // Import partials
 @import "partials/content";
+@import "partials/pagination";
+@import "partials/table";
+@import "partials/menu-second";

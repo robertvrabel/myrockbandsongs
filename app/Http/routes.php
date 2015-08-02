@@ -32,3 +32,7 @@ Route::post('auth/register', 'Auth\AuthController@postRegister');
 Route::controllers([
     'password' => 'Auth\PasswordController',
 ]);
+
+Route::group(['prefix' => 'admin'], function () {
+    Route::get('users', ['uses' => 'Admin\UserController@index', 'as' => 'admin.users.index']);
+});
