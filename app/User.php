@@ -59,7 +59,7 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
      * @var array
      */
     protected $timezones = [
-        '' => '',
+        '' => 'Select a Timezone',
         '-12' => '(GMT -12:00) Eniwetok, Kwajalein',
         '-11' => '(GMT -11:00) Midway Island, Samoa',
         '-10' => '(GMT -10:00) Hawaii',
