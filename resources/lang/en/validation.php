@@ -87,8 +87,8 @@ return [
     */
 
     'custom' => [
-        'attribute-name' => [
-            'rule-name' => 'custom-message',
+        'user_name' => [
+            'user_name' => 'Invalid characters or bad username',
         ],
     ],
 

@@ -24,14 +24,34 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
      *
      * @var array
      */
-    protected $fillable = ['name', 'email', 'password'];
+    protected $fillable = [
+        'first_name',
+        'last_name',
+        'email',
+        'password',
+        'receive_emails',
+        'show_beatles',
+        'show_rbnetwork',
+        'year_born',
+        'user_name',
+        'gamer_tag',
+        'psnname',
+        'wii_friend_code',
+        'has_donated',
+        'time_zone',
+        'where_songs',
+        'preferred_instrument'
+    ];
 
     /**
      * The attributes excluded from the model's JSON form.
      *
      * @var array
      */
-    protected $hidden = ['password', 'remember_token'];
+    protected $hidden = [
+        'password',
+        'remember_token'
+    ];
 
     /**
      * Timezone list
@@ -78,6 +98,14 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
     public function getTimezonesAttribute()
     {
         return $this->timezones;
+    }
+
+    /**
+     * @return string
+     */
+    public function getNameAttribute()
+    {
+        return $this->first_name . ' ' . $this->last_name;
     }
 
     /**
