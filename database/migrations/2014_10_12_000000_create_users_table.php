@@ -26,7 +26,7 @@ class CreateUsersTable extends Migration
             $table->string('last_name');
             $table->string('email')->unique();
             $table->string('password', 60);
-            $table->string('user_name');
+            $table->string('user_name')->unique();
             $table->string('gamer_tag');
             $table->string('psnname');
             $table->string('wii_friend_code');
