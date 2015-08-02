@@ -1,5 +1,4 @@
 <?php
-
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -15,6 +14,10 @@
 Route::get('/', function () {
     return view('pages/index');
 });
+
+// User Settings
+Route::get('user/settings', 'Auth\SettingsController@index');
+Route::patch('user/settings', 'Auth\SettingsController@update');
 
 // Authentication
 Route::get('auth/login', 'Auth\AuthController@getLogin');

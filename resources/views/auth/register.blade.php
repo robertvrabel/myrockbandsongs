@@ -12,7 +12,8 @@
                             {!! Form::label('first_name', 'First Name:', ['class' => ($errors->has('name')?'error':'')] ) !!}
                             {!! Form::text('first_name', old('first_name'), ['class' => ($errors->has('name')?'error':'')] ) !!}
                             @if ($errors->has('first_name'))
-                                <small class="error">{{ $errors->first('first_name') }}</small> @endif
+                                <small class="error">{{ $errors->first('first_name') }}</small>
+                            @endif
                         </div>
                     </div>
 
@@ -21,7 +22,8 @@
                             {!! Form::label('last_name', 'Last Name:', ['class' => ($errors->has('name')?'error':'')] ) !!}
                             {!! Form::text('last_name', old('last_name'), ['class' => ($errors->has('name')?'error':'')] ) !!}
                             @if ($errors->has('last_name'))
-                                <small class="error">{{ $errors->first('last_name') }}</small> @endif
+                                <small class="error">{{ $errors->first('last_name') }}</small>
+                            @endif
                         </div>
                     </div>
 

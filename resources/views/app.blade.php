@@ -41,6 +41,7 @@
                 <li class="has-dropdown">
                     <a data-dropdown="dropdown" aria-controls="dropdown" aria-expanded="false">{{ Auth::user()->name }} <span class="caret"></span></a>
                     <ul id="dropdown" class="f-dropdown" data-dropdown-content aria-hidden="true" tabindex="-1">
+                        <li><a href="/user/settings/">Settings</a></li>
                         <li><a href="/auth/logout">Logout</a></li>
                     </ul>
                 </li>

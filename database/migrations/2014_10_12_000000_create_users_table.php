@@ -21,7 +21,7 @@ class CreateUsersTable extends Migration
             $table->tinyInteger('receive_emails');
             $table->tinyInteger('show_beatles');
             $table->tinyInteger('show_rbnetwork');
-            $table->tinyInteger('year_born');
+            $table->integer('year_born');
             $table->string('first_name');
             $table->string('last_name');
             $table->string('email')->unique();
