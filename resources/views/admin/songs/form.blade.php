@@ -33,7 +33,7 @@
     <div class="xlarge-4 large-4 medium-4 small-12 columns">
         <label>{!! Form::label('artist_id', 'Artist*') !!}
             <div class="add-artist-select">{!! Form::select('artist_id', $artists, null, [($errors->has('artist_id') ? ' error' : '')]) !!}</div>
-            <a href="javascript:void(0);" class="button postfix add-artist">+ Add New Artist</a>
+            <a href="javascript:void(0);" class="button small postfix add-artist">+ Add New Artist</a>
             @if ($errors->has('artist_id'))
                 <small class="error">{{ $errors->first('artist_id') }}</small>
             @endif
@@ -43,7 +43,7 @@
     <div class="xlarge-4 large-4 medium-4 small-12 columns">
         <label>{!! Form::label('album_id', 'Album*') !!}
             <div class="add-album-select">{!! Form::select('album_id', $albums, null, [($errors->has('album_id') ? ' error' : '')]) !!}</div>
-            <a href="javascript:void(0);" class="button postfix add-album">+ Add New Album</a>
+            <a href="javascript:void(0);" class="button small postfix add-album">+ Add New Album</a>
             @if ($errors->has('album_id'))
                 <small class="error">{{ $errors->first('album_id') }}</small>
             @endif
@@ -53,7 +53,7 @@
     <div class="xlarge-4 large-4 medium-4 small-12 columns">
         <label>{!! Form::label('pack_id', 'Pack*') !!}
             <div class="add-pack-select">{!! Form::select('pack_id', $packs, null, [($errors->has('pack_id') ? ' error' : '')]) !!}</div>
-            <a href="javascript:void(0);" class="button postfix add-pack">+ Add New Pack</a>
+            <a href="javascript:void(0);" class="button small postfix add-pack">+ Add New Pack</a>
             @if ($errors->has('pack_id'))
                 <small class="error">{{ $errors->first('pack_id') }}</small>
             @endif

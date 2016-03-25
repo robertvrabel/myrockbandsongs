@@ -7,7 +7,7 @@
 
             <h1>Songs</h1>
 
-            <a href="{{ route('admin.songs.create') }}" class="button small">Add Song</a>
+            <a href="{{ route('admin.songs.create') }}" class="button medium">+ Add Song</a>
 
             <table>
                 <thead>
