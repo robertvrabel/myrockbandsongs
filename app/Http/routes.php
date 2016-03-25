@@ -1,4 +1,5 @@
 <?php
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -10,29 +11,6 @@
 |
 */
 
-// Main Homepage
 Route::get('/', function () {
-    return view('pages/index');
-});
-
-// User Settings
-Route::get('user/settings', 'Auth\SettingsController@index');
-Route::patch('user/settings', 'Auth\SettingsController@update');
-
-// Authentication
-Route::get('auth/login', 'Auth\AuthController@getLogin');
-Route::post('auth/login', 'Auth\AuthController@postLogin');
-Route::get('auth/logout', 'Auth\AuthController@getLogout');
-
-// Registration
-Route::get('auth/register', 'Auth\AuthController@getRegister');
-Route::post('auth/register', 'Auth\AuthController@postRegister');
-
-// Reset password
-Route::controllers([
-    'password' => 'Auth\PasswordController',
-]);
-
-Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function () {
-    Route::get('users', ['uses' => 'Admin\UserController@index', 'as' => 'admin.users.index']);
+    return view('pages.index');
 });

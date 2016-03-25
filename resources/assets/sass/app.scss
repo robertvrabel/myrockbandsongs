@@ -1,32 +1,4 @@
-// Import Foundation Normalize
-@import "../../../bower_components/foundation/scss/normalize";
+@import "settings";
+@import "foundation";
 
-// Import the media queries (required above foundation/components/global)
-@import "media-queries";
-
-// Import Foundation Global (Functions and Default settings)
-@import "../../../bower_components/foundation/scss/foundation/components/global";
-
-// Import Style Guide and Local Vars (required after foundation/components/global)
-@import "vars";
-
-// Import Foundation Components
-@import "../../../bower_components/foundation/scss/foundation/components/grid";
-@import "../../../bower_components/foundation/scss/foundation/components/block-grid";
-@import "../../../bower_components/foundation/scss/foundation/components/flex-video";
-@import "../../../bower_components/foundation/scss/foundation/components/type";
-@import "../../../bower_components/foundation/scss/foundation/components/buttons";
-@import "../../../bower_components/foundation/scss/foundation/components/forms";
-@import "../../../bower_components/foundation/scss/foundation/components/visibility";
-@import "../../../bower_components/foundation/scss/foundation/components/top-bar";
-@import "../../../bower_components/foundation/scss/foundation/components/offcanvas";
-@import "../../../bower_components/foundation/scss/foundation/components/dropdown";
-@import "../../../bower_components/foundation/scss/foundation/components/alert-boxes";
-@import "../../../bower_components/foundation/scss/foundation/components/tables";
-@import "../../../bower_components/foundation/scss/foundation/components/pagination";
-
-// Import partials
-@import "partials/content";
-@import "partials/pagination";
-@import "partials/table";
-@import "partials/menu-second";
+@include foundation-everything;
