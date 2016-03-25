@@ -3540,4 +3540,34 @@ table.hover tr:nth-of-type(even):hover {
 .clearfix::after {
   clear: both; }
 
+.content h1 {
+  font-size: 2em;
+  border-bottom: 1px solid #CCC;
+  margin: 15px 0px 30px 0px;
+  color: #333; }
+
+.pagination li.active span {
+  background: #008CBA;
+  color: #FFFFFF;
+  border-radius: 3px;
+  transition: background-color 300ms;
+  padding: 0.05556rem 0.55556rem 0.05556rem; }
+
+.pagination li.disabled span {
+  padding: 0.05556rem 0.55556rem 0.05556rem; }
+
+table {
+  width: 100%; }
+
+.menu-second {
+  list-style: none;
+  border: 1px solid #eaeaea;
+  margin: 25px 0 0 0;
+  padding: 0; }
+  .menu-second li {
+    display: inline-block; }
+    .menu-second li a {
+      padding: 15px 15px;
+      display: inline-block; }
+
 /*# sourceMappingURL=app.css.map */

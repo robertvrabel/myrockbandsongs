@@ -5,7 +5,7 @@
         <div class="xlarge-12 large-12 medium-12 small-12 xlarge-centered large-centered columns">
             <form role="form" method="POST" action="/auth/login">
                 <fieldset>
-                    <legend>Login</legend>
+                    <h1><legend>Login</legend></h1>
 
                     <div class="row">
                         <div class="xlarge-12 large-12 medium-12 small-12 columns">

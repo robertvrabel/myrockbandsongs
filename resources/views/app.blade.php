@@ -19,22 +19,24 @@
 
 <div class="top-bar">
     <div class="top-bar-left">
-        <ul class="dropdown menu" data-dropdown-menu>
+        <ul class="menu">
             <li class="menu-text">myrockbandsongs.com</li>
             <li><a href="/">Home</a></li>
         </ul>
     </div>
     <div class="top-bar-right">
-        <ul class="menu">
+        <ul class="dropdown menu" data-dropdown-menu>
             @if (Auth::guest())
                 <li><a href="/auth/login">Login</a></li>
                 <li><a href="/auth/register">Register</a></li>
             @else
-                <li><a href="#">Username Here <span class="caret"></span></a></li>
-                <ul class="menu vertical">
-                    <li><a href="/user/settings/">Settings</a></li>
-                    <li><a href="/auth/logout">Logout</a></li>
-                </ul>
+                <li>
+                    <a href="#">{{ Auth::user()->name }} <span class="caret"></span></a>
+                    <ul class="menu vertical">
+                        <li><a href="/user/settings/">Settings</a></li>
+                        <li><a href="/auth/logout">Logout</a></li>
+                    </ul>
+                </li>
             @endif
         </ul>
     </div>

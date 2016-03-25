@@ -1,4 +1,14 @@
+// Foundation variable settings, copied as of 6.2
 @import "settings";
+
+// Core foundation
 @import "foundation";
 
+// Call mixin to get all foundation CSS
 @include foundation-everything;
+
+// Import partials
+@import "_partials/content";
+@import "_partials/pagination";
+@import "_partials/table";
+@import "_partials/menu-second";
