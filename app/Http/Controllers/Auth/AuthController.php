@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Repositories\UserRepository;
 use App\User;
 use Validator;
 use App\Http\Controllers\Controller;
@@ -23,21 +24,18 @@ class AuthController extends Controller
 
     use AuthenticatesAndRegistersUsers, ThrottlesLogins;
 
-    /**
-     * Where to redirect users after login / registration.
-     *
-     * @var string
-     */
     protected $redirectTo = '/';
 
     /**
      * Create a new authentication controller instance.
      *
-     * @return void
+     * @param UserRepository $user
      */
-    public function __construct()
+    public function __construct(UserRepository $user)
     {
-        $this->middleware($this->guestMiddleware(), ['except' => 'logout']);
+        $this->middleware('guest', ['except' => 'getLogout']);
+
+        $this->user = $user;
     }
 
     /**
@@ -49,9 +47,11 @@ class AuthController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => 'required|max:255',
+            'first_name' => 'required|max:255',
+            'last_name' => 'required|max:255',
             'email' => 'required|email|max:255|unique:users',
-            'password' => 'required|min:6|confirmed',
+            'user_name' => 'required|user_name|min:3|max:50|unique:users,user_name',
+            'password' => 'required|confirmed|min:6',
         ]);
     }
 
@@ -63,10 +63,14 @@ class AuthController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
-            'name' => $data['name'],
+        return $this->user->create([
+            'first_name' => $data['first_name'],
+            'last_name' => $data['last_name'],
             'email' => $data['email'],
+            'user_name' => $data['user_name'],
             'password' => bcrypt($data['password']),
+            'receive_emails' => 1,
         ]);
     }
+
 }
