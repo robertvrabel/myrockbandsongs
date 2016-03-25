@@ -41,5 +41,5 @@ Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function () {
     Route::get('users', ['uses' => 'Admin\UsersController@index', 'as' => 'admin.users.index']);
 
     // Songs
-    Route::resource('songs', 'Admin\SongsController@index');
+    Route::resource('songs', 'Admin\SongsController');
 });
